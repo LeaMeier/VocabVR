@@ -13,7 +13,7 @@ public class Portal : MonoBehaviour
         // Wird aufgerufen, wenn ein anderer Collider in den Trigger eintritt
         private void OnTriggerEnter(Collider other)
         {
-            // Überprüfe, ob das Objekt, das den Trigger auslöst, der Spieler ist (Annahme: der Spieler hat das Tag "Player")
+            // ?berpr?fe, ob das Objekt, das den Trigger ausl?st, der Spieler ist (Annahme: der Spieler hat das Tag "Player")
             if (other.CompareTag("Player"))
             {
                 // Szene wechseln
