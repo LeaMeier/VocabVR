@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShowWelcomeScreen : MonoBehaviour
@@ -19,7 +17,16 @@ public class ShowWelcomeScreen : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnMouseDown()
+    void Update()
+    {
+        // Check for controller input (e.g., the "A" button on an Xbox controller)
+        if (Input.GetButtonDown("Fire1")) // "Fire1" is typically mapped to the "A" button on controllers
+        {
+            OnControllerClick();
+        }
+    }
+
+    void OnControllerClick()
     {
         exclamationMark.SetActive(false);
         card1.SetActive(true);

@@ -39,18 +39,27 @@ public class InteractableObject : MonoBehaviour
         closeButtonRead.onClick.AddListener(CloseReadCard);
         closeButtonListen.onClick.AddListener(CloseListenCard);
         listenButton.onClick.AddListener(PlayWord);
-        rightAnswer.onClick.AddListener(answeredRight);
-        wrongAnswer.onClick.AddListener(answeredWrong);
-        wrongAnswer2.onClick.AddListener(answeredWrong);
-        wrongAnswer3.onClick.AddListener(answeredWrong);
-        closeButtonWrongAnswer.onClick.AddListener(closeWrongAnswerCard);
-        closeButtonRightAnswer.onClick.AddListener(closeRightAnswerCard);
+        rightAnswer.onClick.AddListener(AnsweredRight);
+        wrongAnswer.onClick.AddListener(AnsweredWrong);
+        wrongAnswer2.onClick.AddListener(AnsweredWrong);
+        wrongAnswer3.onClick.AddListener(AnsweredWrong);
+        closeButtonWrongAnswer.onClick.AddListener(CloseWrongAnswerCard);
+        closeButtonRightAnswer.onClick.AddListener(CloseRightAnswerCard);
 
         // Add voice output
         speech = GetComponent<LMNTSpeech>();
     }
 
-    void OnMouseDown()
+    void Update()
+    {
+        // Check for controller input (e.g., the "A" button on an Xbox controller)
+        if (Input.GetButtonDown("Fire1")) // "Fire1" is typically mapped to the "A" button on controllers
+        {
+            OnControllerClick();
+        }
+    }
+
+    void OnControllerClick()
     {
         if (clickCount == 1)
         {
@@ -91,27 +100,27 @@ public class InteractableObject : MonoBehaviour
         StartCoroutine(speech.Talk());
     }
 
-    void answeredRight()
+    void AnsweredRight()
     {
         checkBackCard.SetActive(false);
         rightAnswerCard.SetActive(true);
     }
 
-    void answeredWrong()
+    void AnsweredWrong()
     {
         checkBackCard.SetActive(false);
         wrongAnswerCard.SetActive(true);
     }
 
-    void closeRightAnswerCard()
+    void CloseRightAnswerCard()
     {
         rightAnswerCard.SetActive(false);
     }
 
-    void closeWrongAnswerCard()
+    void CloseWrongAnswerCard()
     {
         wrongAnswerCard.SetActive(false);
-        clickCount--;
+        clickCount = 1;
         exclamationMarkGreen.SetActive(true);
     }
 }
