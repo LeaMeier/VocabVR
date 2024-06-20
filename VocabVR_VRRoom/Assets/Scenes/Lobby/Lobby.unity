@@ -827,6 +827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915ec800794564afd881e4a87e4f2a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftHand: {fileID: 1371723512}
+  rightHand: {fileID: 672282234}
+  CenterEyeCamera: {fileID: 804438532}
+  forwardDirection: {fileID: 1513958020}
+  speed: 70
 --- !u!54 &164552713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8762,7 +8767,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

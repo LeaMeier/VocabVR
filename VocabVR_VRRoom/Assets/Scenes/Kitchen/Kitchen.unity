@@ -1910,7 +1910,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8397790275395851638, guid: c098eb7f1c79e40c4a67efc2dcb59a52,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1407444096}
   m_SourcePrefab: {fileID: 100100000, guid: c098eb7f1c79e40c4a67efc2dcb59a52, type: 3}
 --- !u!4 &846881726 stripped
 Transform:
@@ -2044,7 +2048,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 846881725}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1407444095}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -3792,6 +3796,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915ec800794564afd881e4a87e4f2a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftHand: {fileID: 1834423136}
+  rightHand: {fileID: 1723457387}
+  CenterEyeCamera: {fileID: 1553511767}
+  forwardDirection: {fileID: 1476670085}
+  speed: 70
 --- !u!54 &1401926620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3819,6 +3828,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!1 &1407444095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8397790275395851638, guid: c098eb7f1c79e40c4a67efc2dcb59a52,
+    type: 3}
+  m_PrefabInstance: {fileID: 846881725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1407444096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407444095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1431135651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6145,6 +6181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1774742063}
   - component: {fileID: 1774742062}
+  - component: {fileID: 1774742064}
   m_Layer: 0
   m_Name: XR Interaction Manager
   m_TagString: Untagged
@@ -6181,6 +6218,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774742064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774742061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ActionAssets:
+  - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &1798634793
 GameObject:
   m_ObjectHideFlags: 0
@@ -7646,7 +7697,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
