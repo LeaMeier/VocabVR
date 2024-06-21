@@ -1,11 +1,13 @@
 using LMNT;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class InteractableObject : MonoBehaviour
 {
 
-    private GameObject currentInteractable; // Das aktuell ausgewï¿½hlte GameObject
+    private GameObject currentInteractable; // Das aktuell ausgewählte GameObject
 
     public GameObject exclamationMarkRed;
     public GameObject exclamationMarkOrange;
@@ -24,7 +26,6 @@ public class InteractableObject : MonoBehaviour
     public Button wrongAnswer;
     public Button wrongAnswer2;
     public Button wrongAnswer3;
-    private int clickCount = 1;
     private LMNTSpeech speech;
     public Collider triggeredCollider;
 
@@ -54,47 +55,46 @@ public class InteractableObject : MonoBehaviour
         speech = GetComponent<LMNTSpeech>();
     }
 
-    void Update()
+    public void Update()
     {
-        // Check for controller input (e.g., the "A" button on an Xbox controller)
-        if (Input.GetButtonDown("Fire1")) // "Fire1" is typically mapped to the "A" button on controllers
-        {
-            OnControllerClick();
-        }
-    }
+        RaycastHit hit;
 
-    void OnControllerClick()
-    {
-        if (clickCount == 1)
+        //JoystickButton1 = A auf Rechten Controller
+        //JoystickButton5 = Mittelfinger Button auf Rechten Controller
+        if (Input.GetKeyDown(KeyCode.JoystickButton5) /*&& Physics.Raycast(transform.position, transform.forward, out hit)*/)
         {
-            exclamationMarkRed.SetActive(false);
-            readCard.SetActive(true);
-        }
+            /*if (hit.collider == triggeredCollider)
+            {*/
 
-        if (clickCount == 2)
-        {
-            exclamationMarkOrange.SetActive(false);
-            listenCard.SetActive(true);
-        }
+                if (exclamationMarkRed.activeSelf)
+                {
+                    exclamationMarkRed.SetActive(false);
+                    readCard.SetActive(true);
+                }
 
-        if (clickCount == 3)
-        {
-            exclamationMarkGreen.SetActive(false);
-            checkBackCard.SetActive(true);
-            clickCount++;
+                if (exclamationMarkOrange.activeSelf)
+                {
+                    exclamationMarkOrange.SetActive(false);
+                    listenCard.SetActive(true);
+                }
+
+                if (exclamationMarkGreen.activeSelf)
+                {
+                    exclamationMarkGreen.SetActive(false);
+                    checkBackCard.SetActive(true);
+                }
+           // }
         }
     }
 
     void CloseReadCard()
     {
-        clickCount++;
         readCard.SetActive(false);
         exclamationMarkOrange.SetActive(true);
     }
 
     void CloseListenCard()
     {
-        clickCount++;
         listenCard.SetActive(false);
         exclamationMarkGreen.SetActive(true);
     }
@@ -124,7 +124,6 @@ public class InteractableObject : MonoBehaviour
     void CloseWrongAnswerCard()
     {
         wrongAnswerCard.SetActive(false);
-        clickCount = 1;
-        exclamationMarkGreen.SetActive(true);
+        exclamationMarkRed.SetActive(true);
     }
 }

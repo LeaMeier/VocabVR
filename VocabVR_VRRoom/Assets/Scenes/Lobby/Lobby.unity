@@ -831,7 +831,7 @@ MonoBehaviour:
   rightHand: {fileID: 672282234}
   CenterEyeCamera: {fileID: 804438532}
   forwardDirection: {fileID: 1513958020}
-  speed: 70
+  speed: 100
 --- !u!54 &164552713
 Rigidbody:
   m_ObjectHideFlags: 0

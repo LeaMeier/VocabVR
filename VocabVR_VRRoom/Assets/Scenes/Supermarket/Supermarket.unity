@@ -7968,7 +7968,7 @@ MonoBehaviour:
   rightHand: {fileID: 1426784405}
   CenterEyeCamera: {fileID: 1184309236}
   forwardDirection: {fileID: 591640529}
-  speed: 70
+  speed: 100
 --- !u!4 &1392512730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5044352931900997431, guid: 302fc36bcf25c0e4e8efb2e3ddf452c6,
