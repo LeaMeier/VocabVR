@@ -50,27 +50,24 @@ public class InteractableObject : MonoBehaviour
         speech = GetComponent<LMNTSpeech>();
     }
 
-    public void Update()
+    public void ClickOnObject()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (exclamationMarkRed.activeSelf)
         {
-            if (exclamationMarkRed.activeSelf)
-            {
-                exclamationMarkRed.SetActive(false);
-                readCard.SetActive(true);
-            }
+            exclamationMarkRed.SetActive(false);
+            readCard.SetActive(true);
+        }
 
-            if (exclamationMarkOrange.activeSelf)
-            {
-                exclamationMarkOrange.SetActive(false);
-                listenCard.SetActive(true);
-            }
+        if (exclamationMarkOrange.activeSelf)
+        {
+            exclamationMarkOrange.SetActive(false);
+            listenCard.SetActive(true);
+        }
 
-            if (exclamationMarkGreen.activeSelf)
-            {
-                exclamationMarkGreen.SetActive(false);
-                checkBackCard.SetActive(true);
-            }
+        if (exclamationMarkGreen.activeSelf)
+        {
+            exclamationMarkGreen.SetActive(false);
+            checkBackCard.SetActive(true);
         }
     }
 
