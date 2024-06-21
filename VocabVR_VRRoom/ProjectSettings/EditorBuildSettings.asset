@@ -5,19 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Kitchen/Kitchen.unity
     guid: a21be22531c8a45449459567e743741d
   - enabled: 1
     path: Assets/Scenes/Supermarket/Supermarket.unity
     guid: c9c2e4eb80825a1429b4b515c9e062f0
   - enabled: 0
-    path: Assets/Scenes/Kitchen.unity
-    guid: 9536790c628c248d0932c0195fe94cbe
-  - enabled: 1
     path: Assets/Scenes/Lobby/Lobby.unity
     guid: 3f7574a33d96efa46ac2a4831afb5f7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Classroom/Classroom.unity
     guid: 1120a87e3e2d9b246a38a52b2a6b9243
   m_configObjects:
