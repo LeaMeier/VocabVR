@@ -2,13 +2,9 @@ using LMNT;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class InteractableObject : MonoBehaviour
 {
-
-    private GameObject currentInteractable; // Das aktuell ausgewählte GameObject
-
     public GameObject exclamationMarkRed;
     public GameObject exclamationMarkOrange;
     public GameObject exclamationMarkGreen;
@@ -27,7 +23,6 @@ public class InteractableObject : MonoBehaviour
     public Button wrongAnswer2;
     public Button wrongAnswer3;
     private LMNTSpeech speech;
-    public Collider triggeredCollider;
 
     void Start()
     {
@@ -57,33 +52,25 @@ public class InteractableObject : MonoBehaviour
 
     public void Update()
     {
-        RaycastHit hit;
-
-        //JoystickButton1 = A auf Rechten Controller
-        //JoystickButton5 = Mittelfinger Button auf Rechten Controller
-        if (Input.GetKeyDown(KeyCode.JoystickButton5) /*&& Physics.Raycast(transform.position, transform.forward, out hit)*/)
+        if(Input.GetButtonDown("Fire1"))
         {
-            /*if (hit.collider == triggeredCollider)
-            {*/
+            if (exclamationMarkRed.activeSelf)
+            {
+                exclamationMarkRed.SetActive(false);
+                readCard.SetActive(true);
+            }
 
-                if (exclamationMarkRed.activeSelf)
-                {
-                    exclamationMarkRed.SetActive(false);
-                    readCard.SetActive(true);
-                }
+            if (exclamationMarkOrange.activeSelf)
+            {
+                exclamationMarkOrange.SetActive(false);
+                listenCard.SetActive(true);
+            }
 
-                if (exclamationMarkOrange.activeSelf)
-                {
-                    exclamationMarkOrange.SetActive(false);
-                    listenCard.SetActive(true);
-                }
-
-                if (exclamationMarkGreen.activeSelf)
-                {
-                    exclamationMarkGreen.SetActive(false);
-                    checkBackCard.SetActive(true);
-                }
-           // }
+            if (exclamationMarkGreen.activeSelf)
+            {
+                exclamationMarkGreen.SetActive(false);
+                checkBackCard.SetActive(true);
+            }
         }
     }
 
