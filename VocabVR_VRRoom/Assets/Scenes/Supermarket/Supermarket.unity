@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18263836, g: 0.22834845, b: 0.3071451, a: 1}
+  m_IndirectSpecularColor: {r: 0.18263815, g: 0.22834809, b: 0.30714464, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5661,12 +5661,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1002635070}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1002635073 stripped
-MeshCollider:
-  m_CorrespondingSourceObject: {fileID: 4368447564947574649, guid: 688a230d8b0551a42ab8a80ad85c1416,
-    type: 3}
-  m_PrefabInstance: {fileID: 1002635070}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1002635074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5798,7 +5792,6 @@ MonoBehaviour:
   wrongAnswer: {fileID: 883062863}
   wrongAnswer2: {fileID: 883062862}
   wrongAnswer3: {fileID: 883062861}
-  triggeredCollider: {fileID: 1002635073}
 --- !u!43 &1011645026
 Mesh:
   m_ObjectHideFlags: 0
@@ -7968,7 +7961,7 @@ MonoBehaviour:
   rightHand: {fileID: 1426784405}
   CenterEyeCamera: {fileID: 1184309236}
   forwardDirection: {fileID: 591640529}
-  speed: 70
+  speed: 100
 --- !u!4 &1392512730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5044352931900997431, guid: 302fc36bcf25c0e4e8efb2e3ddf452c6,
