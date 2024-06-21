@@ -16,7 +16,7 @@ public class ControllerWalking : MonoBehaviour
     private Vector3 positionThisFrameLeftHand;
     private Vector3 positionThisFrameRightHand;
 
-    public float speed = 100;
+    public float speed = 70;
     private float handSpeed;
 
     void Start()
