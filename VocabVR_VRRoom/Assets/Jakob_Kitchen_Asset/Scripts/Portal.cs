@@ -13,12 +13,12 @@ public class Portal : MonoBehaviour
     {
 
 
-        // Sicherstellen, dass Lichtquellen nicht zerstört werden
+        /* Sicherstellen, dass Lichtquellen nicht zerstört werden
         Light[] lights = FindObjectsOfType<Light>();
         foreach (Light light in lights)
         {
             DontDestroyOnLoad(light.gameObject);
-        }
+        }*/
 
 
         // Deaktiviere das FadeImage am Anfang
