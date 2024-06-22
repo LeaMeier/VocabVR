@@ -28,24 +28,27 @@ public class ControllerWalking : MonoBehaviour
 
     void Update()
     {
-        float yRotation = CenterEyeCamera.transform.eulerAngles.y;
-        forwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
+        /*if (Input.GetKeyDown(KeyCode.JoystickButton5))
+        {*/
+            float yRotation = CenterEyeCamera.transform.eulerAngles.y;
+            forwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
 
-        positionThisFrameLeftHand = leftHand.transform.position;
-        positionThisFrameRightHand = rightHand.transform.position;
-        playerPositionThisFrame = transform.position;
+            positionThisFrameLeftHand = leftHand.transform.position;
+            positionThisFrameRightHand = rightHand.transform.position;
+            playerPositionThisFrame = transform.position;
 
-        var playerDistanceMoved = Vector3.Distance(playerPositionThisFrame, playerPositionPreviousFrame);
-        var leftHandDistanceMoved = Vector3.Distance(positionPreviousFrameLeftHand, positionThisFrameLeftHand);
-        var rightHandDistanceMoved = Vector3.Distance(positionPreviousFrameRightHand, positionThisFrameRightHand);
+            var playerDistanceMoved = Vector3.Distance(playerPositionThisFrame, playerPositionPreviousFrame);
+            var leftHandDistanceMoved = Vector3.Distance(positionPreviousFrameLeftHand, positionThisFrameLeftHand);
+            var rightHandDistanceMoved = Vector3.Distance(positionPreviousFrameRightHand, positionThisFrameRightHand);
 
-        handSpeed = ((leftHandDistanceMoved - playerDistanceMoved) + (rightHandDistanceMoved - playerDistanceMoved));
+            handSpeed = ((leftHandDistanceMoved - playerDistanceMoved) + (rightHandDistanceMoved - playerDistanceMoved));
 
-        if (Time.timeSinceLevelLoad > 1f)
-            transform.position += forwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
+            if (Time.timeSinceLevelLoad > 1f)
+                transform.position += forwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
 
-        positionPreviousFrameLeftHand = positionThisFrameLeftHand;
-        positionPreviousFrameRightHand = positionThisFrameRightHand;
-        playerPositionPreviousFrame = playerPositionThisFrame;
+            positionPreviousFrameLeftHand = positionThisFrameLeftHand;
+            positionPreviousFrameRightHand = positionThisFrameRightHand;
+            playerPositionPreviousFrame = playerPositionThisFrame;
+       // }
     }
 }
