@@ -2943,6 +2943,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1872215344}
+    - target: {fileID: 1803833930366805577, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_text
+      value: el pan
+      objectReference: {fileID: 0}
     - target: {fileID: 2408717026428810277, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_Mesh
@@ -10635,7 +10640,7 @@ PrefabInstance:
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.81
+      value: -3.429
       objectReference: {fileID: 0}
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -10650,7 +10655,7 @@ PrefabInstance:
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -10660,7 +10665,7 @@ PrefabInstance:
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -10675,7 +10680,7 @@ PrefabInstance:
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -17622,6 +17627,16 @@ PrefabInstance:
       propertyPath: m_text
       value: "die Wassermelone\n=\nla sand\xEDa"
       objectReference: {fileID: 0}
+    - target: {fileID: 435443085558309029, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 435443085558309029, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 848695873148294703, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_Mesh
@@ -20149,9 +20164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e19fb953cf449ee9cab37aecb085ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exclamationMarkRed: {fileID: 350442298}
+  exclamationMarkRed: {fileID: 350442296}
   exclamationMarkOrange: {fileID: 350442297}
-  exclamationMarkGreen: {fileID: 350442296}
+  exclamationMarkGreen: {fileID: 350442298}
   readCard: {fileID: 350442312}
   listenCard: {fileID: 350442305}
   checkBackCard: {fileID: 350442310}
@@ -20471,7 +20486,17 @@ PrefabInstance:
     - target: {fileID: 435443085558309029, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_text
-      value: "das K\xFChlregal\n=\nel armario refrigerador"
+      value: "das K\xFChlregal =\nel armario refrigerador"
+      objectReference: {fileID: 0}
+    - target: {fileID: 435443085558309029, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 435443085558309029, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 848695873148294703, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -20498,6 +20523,16 @@ PrefabInstance:
       propertyPath: m_text
       value: el armario refrigerador
       objectReference: {fileID: 0}
+    - target: {fileID: 1803833930366805577, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803833930366805577, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2408717026428810277, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_Mesh
@@ -20507,6 +20542,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: el armario refrigerador
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491167175129115154, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491167175129115154, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3152001172008801227, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -20578,6 +20623,16 @@ PrefabInstance:
       propertyPath: m_text
       value: el armario
       objectReference: {fileID: 0}
+    - target: {fileID: 6912439021093053134, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6912439021093053134, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8050775634954155827, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_Mesh
@@ -20588,10 +20643,30 @@ PrefabInstance:
       propertyPath: m_text
       value: el refrigerado
       objectReference: {fileID: 0}
+    - target: {fileID: 8321743152296203987, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321743152296203987, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8322656778113640412, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_text
       value: "el refrigerador port\xE1til"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322656778113640412, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322656778113640412, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8377667057212383415, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
@@ -21194,6 +21269,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1974528069}
+    - target: {fileID: 1069269649678926886, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 23.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1140477163956828732, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
       propertyPath: m_Mesh
@@ -21288,6 +21368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012119169377273755, guid: 36be450ef38324944bb1a9ee4909d7c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -24.5
       objectReference: {fileID: 0}
     - target: {fileID: 6912439021093053134, guid: 36be450ef38324944bb1a9ee4909d7c3,
         type: 3}
