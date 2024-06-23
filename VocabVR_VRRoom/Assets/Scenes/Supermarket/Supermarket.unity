@@ -4128,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: 1292413958170791855, guid: 02e486d74bb7a4b18bc1ebc4ec64e72f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.226
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 1292413958170791855, guid: 02e486d74bb7a4b18bc1ebc4ec64e72f,
         type: 3}
@@ -4657,7 +4657,7 @@ PrefabInstance:
     - target: {fileID: 7441673591190690378, guid: ec56a4040a19e49b2b30d38a6f956f71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.226
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 7441673591190690378, guid: ec56a4040a19e49b2b30d38a6f956f71,
         type: 3}
@@ -9432,11 +9432,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6617941956680600934, guid: 688a230d8b0551a42ab8a80ad85c1416,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1002635079}
+      addedObject: {fileID: 1002635076}
     - targetCorrespondingSourceObject: {fileID: 6617941956680600934, guid: 688a230d8b0551a42ab8a80ad85c1416,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1002635078}
+      addedObject: {fileID: 1002635075}
   m_SourcePrefab: {fileID: 100100000, guid: 688a230d8b0551a42ab8a80ad85c1416, type: 3}
 --- !u!4 &1002635071 stripped
 Transform:
@@ -9593,7 +9593,7 @@ MonoBehaviour:
   wrongAnswer: {fileID: 5277909762034468178}
   wrongAnswer2: {fileID: 5277909762034468177}
   wrongAnswer3: {fileID: 5277909762034468176}
---- !u!114 &1002635078
+--- !u!114 &1002635075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9605,9 +9605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40e181ef7f384f5e895d4dc3eee0702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voice: Amy
+  voice: "Amy\r"
   dialogue: la naranja
---- !u!114 &1002635079
+--- !u!114 &1002635076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20396,7 +20396,7 @@ PrefabInstance:
     - target: {fileID: 7441673591190690378, guid: 156f3aa8aad004cbca1971a9a2f51a64,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.226
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 7441673591190690378, guid: 156f3aa8aad004cbca1971a9a2f51a64,
         type: 3}
