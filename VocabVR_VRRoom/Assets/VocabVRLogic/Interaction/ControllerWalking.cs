@@ -16,8 +16,9 @@ public class ControllerWalking : MonoBehaviour
     private Vector3 positionThisFrameLeftHand;
     private Vector3 positionThisFrameRightHand;
 
-    public float speed = 100;
+    public float speed = 400f; // Adjusted for a smoother movement
     private float handSpeed;
+    public float movementThreshold = 0.01f; // Further reduced movement threshold
 
     void Start()
     {
@@ -28,27 +29,27 @@ public class ControllerWalking : MonoBehaviour
 
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.JoystickButton5))
-        {*/
-            float yRotation = CenterEyeCamera.transform.eulerAngles.y;
-            forwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
+        float yRotation = CenterEyeCamera.transform.eulerAngles.y;
+        forwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
 
-            positionThisFrameLeftHand = leftHand.transform.position;
-            positionThisFrameRightHand = rightHand.transform.position;
-            playerPositionThisFrame = transform.position;
+        positionThisFrameLeftHand = leftHand.transform.position;
+        positionThisFrameRightHand = rightHand.transform.position;
+        playerPositionThisFrame = transform.position;
 
-            var playerDistanceMoved = Vector3.Distance(playerPositionThisFrame, playerPositionPreviousFrame);
-            var leftHandDistanceMoved = Vector3.Distance(positionPreviousFrameLeftHand, positionThisFrameLeftHand);
-            var rightHandDistanceMoved = Vector3.Distance(positionPreviousFrameRightHand, positionThisFrameRightHand);
+        var playerDistanceMoved = Vector3.Distance(playerPositionThisFrame, playerPositionPreviousFrame);
+        var leftHandDistanceMoved = Vector3.Distance(positionPreviousFrameLeftHand, positionThisFrameLeftHand);
+        var rightHandDistanceMoved = Vector3.Distance(positionPreviousFrameRightHand, positionThisFrameRightHand);
 
-            handSpeed = ((leftHandDistanceMoved - playerDistanceMoved) + (rightHandDistanceMoved - playerDistanceMoved));
+        handSpeed = ((leftHandDistanceMoved - playerDistanceMoved) + (rightHandDistanceMoved - playerDistanceMoved)) / 2;
 
-            if (Time.timeSinceLevelLoad > 1f)
-                transform.position += forwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
+        if (handSpeed > movementThreshold && Time.timeSinceLevelLoad > 1f) // Check if hand speed exceeds the threshold
+        {
+            Vector3 direction = forwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, transform.position + direction, 0.5f); // Smooth movement
+        }
 
-            positionPreviousFrameLeftHand = positionThisFrameLeftHand;
-            positionPreviousFrameRightHand = positionThisFrameRightHand;
-            playerPositionPreviousFrame = playerPositionThisFrame;
-       // }
+        positionPreviousFrameLeftHand = positionThisFrameLeftHand;
+        positionPreviousFrameRightHand = positionThisFrameRightHand;
+        playerPositionPreviousFrame = playerPositionThisFrame;
     }
 }
